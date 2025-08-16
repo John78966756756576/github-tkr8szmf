@@ -33,9 +33,14 @@ function App() {
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-col items-center space-y-4">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
           <span className="text-gray-600">Loading...</span>
+          <div className="text-center max-w-md">
+            <p className="text-sm text-gray-500">
+              If this takes too long, please check your Supabase configuration in the .env file
+            </p>
+          </div>
         </div>
       </div>
     );
